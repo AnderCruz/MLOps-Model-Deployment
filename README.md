@@ -1,110 +1,61 @@
-# 🚀 MLOps: Model Deployment
+# mlops
 
-This project demonstrates how to **deploy machine learning models** in production environments using **Flask, Docker, Google Cloud Platform (GCP), and GitHub Actions**.
+<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
+    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
+</a>
 
-Developed by **Nowa Analytics**, a consultancy specialized in **Data Science, Machine Learning, and MLOps solutions**.
+mlops project
 
----
-
-## 📌 Project Overview
-
-The main objective of this project is to learn how to:
-
-* Make machine learning models accessible via APIs
-* Deploy models using **Flask** and **Google Cloud Platform**
-* Package and distribute applications with **Docker**
-* Automate continuous deployment with **GitHub Actions**
-
-By the end of this project, you will have a **production-ready deployment pipeline** for serving ML models.
-
----
-
-## ⚙️ Project Workflow
-
-### 🔹 1. Project Setup
-
-* Install **Cookiecutter** to follow community-driven data science repository standards
-* Structure a **Data Science + Flask** project
-* Create a **GitHub repository** and upload project files
-
-### 🔹 2. Model Serving with Flask on GCP
-
-* Create a **Google Cloud Platform (GCP)** account
-* Launch a server on **Google Compute Engine**
-* Configure and run a Flask server
-* Open **Firewall rules** to allow HTTP requests
-* Serve your ML model on a remote server
-
-### 🔹 3. Containerization with Docker
-
-* Write a `Dockerfile`
-* Configure **environment variables** in Docker
-* Build Docker containers
-* Push images to **Google Container Registry**
-* Deploy containers to **Google Cloud Run**
-
-### 🔹 4. CI/CD with GitHub Actions
-
-* Create a **GitHub Actions YAML pipeline**
-* Integrate with **Google Cloud Run**
-* Create and configure a **Service Account**
-* Store secrets in **GitHub Actions**
-* Enable **continuous delivery pipeline** for automatic deployments
-
----
-
-## 📁 Project Structure
+## Project Organization
 
 ```
-📦 mlops-deploy
+├── LICENSE            <- Open-source license if one is chosen
+├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
+├── README.md          <- The top-level README for developers using this project.
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
 │
-├── app/                  # Flask application
-│   ├── main.py           # API and model serving
-│   ├── model.pkl         # Serialized ML model
-│   └── requirements.txt  # Dependencies
+├── docs               <- A default mkdocs project; see www.mkdocs.org for details
 │
-├── Dockerfile            # Docker container definition
-├── .github/workflows/    # GitHub Actions CI/CD pipelines
-│   └── deploy.yaml
-├── README.md             # This file
-└── cookiecutter.json     # Project template definition
+├── models             <- Trained and serialized models, model predictions, or model summaries
+│
+├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+│                         the creator's initials, and a short `-` delimited description, e.g.
+│                         `1.0-jqp-initial-data-exploration`.
+│
+├── pyproject.toml     <- Project configuration file with package metadata for 
+│                         mlops and configuration for tools like black
+│
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        <- Generated graphics and figures to be used in reporting
+│
+├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze > requirements.txt`
+│
+├── setup.cfg          <- Configuration file for flake8
+│
+└── mlops   <- Source code for use in this project.
+    │
+    ├── __init__.py             <- Makes mlops a Python module
+    │
+    ├── config.py               <- Store useful variables and configuration
+    │
+    ├── dataset.py              <- Scripts to download or generate data
+    │
+    ├── features.py             <- Code to create features for modeling
+    │
+    ├── modeling                
+    │   ├── __init__.py 
+    │   ├── predict.py          <- Code to run model inference with trained models          
+    │   └── train.py            <- Code to train models
+    │
+    └── plots.py                <- Code to create visualizations
 ```
 
----
-
-## 📊 Technologies & Tools
-
-* **Python 3.9+**
-* **Flask** → API framework
-* **Google Cloud Platform (GCP)** → Compute Engine, Container Registry, Cloud Run
-* **Docker** → Containerization
-* **GitHub Actions** → CI/CD pipeline
-* **Cookiecutter** → Project structuring
-
----
-
-## ✅ Results
-
-* Built a **production-ready ML API** with Flask
-* Deployed models on **Google Compute Engine** and **Cloud Run**
-* Containerized applications with **Docker**
-* Automated deployments using **GitHub Actions CI/CD pipeline**
-
----
-
-## 🏢 About Nowa Analytics
-
-**Nowa Analytics** is a consultancy specialized in **data analytics, AI, and MLOps**. We help companies transform models into production systems through **cloud solutions, automation, and scalable deployment pipelines**.
-
-📍 São Paulo | Madrid | London
-🌐 [nowaanalytics.com](http://nowaanalytics.com) *(replace with actual site if available)*
-
----
-
-## 📬 Contact
-
-For consulting services or project inquiries:
-
-* 📧 [contact@nowaanalytics.com](mailto:contact@nowaanalytics.com)
-* 💼 LinkedIn: [Nowa Analytics](https://linkedin.com/company/nowaanalytics)
+--------
 
